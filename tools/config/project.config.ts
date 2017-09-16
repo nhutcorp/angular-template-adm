@@ -106,6 +106,8 @@ export class ProjectConfig extends SeedConfig {
       }
     ];
 
+    this.addPackagesBundles(additionalPackages);
+    
     /* Add proxy middleware */
     // this.PROXY_MIDDLEWARE = [
     //   require('http-proxy-middleware')('/api', { ws: false, target: 'http://localhost:3003' })
