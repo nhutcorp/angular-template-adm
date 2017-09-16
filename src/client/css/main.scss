@@ -1,5 +1,33 @@
+@import 'variables';
+@import '@angular/material/theming';
+@import '../app/app-theme';
+
+// Include the base styles for Angular Material core. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$indigo-pink-primary: mat-palette($mat-indigo);
+$indigo-pink-accent:  mat-palette($mat-pink, A200, A100, A400);
+$indigo-pink-warn:    mat-palette($mat-red);
+$indigo-pink-theme: mat-light-theme($indigo-pink-primary, $indigo-pink-accent, $indigo-pink-warn);
+
+// Define the light theme.
+$primary: mat-palette($mat-cyan);
+$accent:  mat-palette($mat-amber, A200, A100, A400);
+
+$theme: mat-light-theme($primary, $accent);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($indigo-pink-theme);
+@include app-theme($indigo-pink-theme);
+
 /* Reset */
-html, body, div {
+html, body {
   border: 0;
   margin: 0;
   padding: 0;
@@ -10,62 +38,147 @@ html, body {
   width: 100%;
 }
 
-body {
+body, p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: $primary-font;
+}
+
+/* body {
   display: flex;
   flex-direction: column;
 }
 
-/* Box-sizing border-box */
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-/* Set up a default font and some padding to provide breathing room */
 body {
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  margin: 0;
+} */
+
+[md-button], [md-raised-button] {
+  text-transform: uppercase;
 }
 
-p {
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  line-height: 20px;
-  margin-bottom: 1em;
-  margin-top: 1em;
+/* h1, h2 {
+  weight: 400;
+} */
+
+.search-list {
+  margin: 10px;
+  md-input-container, md-select, button {
+    margin: 0 5px;
+  }
 }
 
-ul {
-  margin: 10px 0 0;
-  padding: 0 0 0 20px;
+div.item-grid {
+  > div {
+    width: 100%;
+  }
+
+  md-card {
+    padding: 0;
+    margin: 10px;
+    //margin: 0 16px 16px 0;
+    //width: 250px;
+    // display: flex;
+    // flex-direction: column;
+  }
+
+  md-card-title-group, md-card-content {
+    padding: 16px;
+  }
+
+  md-card-title-group {
+    img {
+      padding: 3px;
+    }
+
+    md-card-title {
+      font-size: 18px;
+      font-weight: 100;
+    }
+  }
+
+  md-card-footer {
+    padding-left: 8px;
+  }
+
 }
 
-li {
-  font-weight: 400;
-  margin-top: 4px;
+.btn {
+  a {
+    width: 100%;
+  }
 }
 
-input {
-  border: 1px solid #106cc8;
-  font-size: 14px;
-  height: 40px;
-  outline: none;
-  padding: 8px;
+.no-record {
+  margin-top: 10px;
 }
 
-button {
-  background-color: #106cc8;
-  border-style: none;
-  color: rgba(255, 255, 255, 0.87);
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  height: 40px;
-  padding: 8px 18px;
-  text-decoration: none;
+.edit-form {
+  .field {
+    display: block;
+    label {
+      width: 100%;
+      display: block;
+      margin: 3px;
+      //position: relative;
+      //top: 1px;
+    }
+    md-checkbox, md-radio-button {
+      padding-right: 10px;
+    }
+  }
+  md-input-container, div.field, md-radio-group, md-checkbox, button {margin: 5px}
+  md-radio-button {
+    margin-right: 10px;
+  }
 }
 
-button:hover {
-  background-color: #28739e;
+.gird-box {
+  padding: 0;
+  margin: 10px;
+
+  md-card-title-group, md-card-content {
+    padding: 16px;
+  }
+
+  md-card-title-group {
+    img {
+      padding: 3px;
+    }
+
+    md-card-title {
+      font-size: 18px;
+      font-weight: 100;
+      margin-bottom: 0px;
+
+    }
+  }
 }
+
+.detail-box {
+  dl {
+    margin: 3px;
+    padding: 0;
+    dd {
+      display: inline;
+    }
+    dt{
+      display: inline-block;
+      min-width: 100px;
+      font-weight: bold;
+    }
+  }
+
+}
+
+
+.fill {
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+.fill-height {
+  display: block;
+  height: 20px;
+}
+

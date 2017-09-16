@@ -1,0 +1,35 @@
+// @import './main/main-theme';
+@import './shared/shared-theme';
+// @import './included/included-theme';
+// @import './plugins/plugins-theme';
+
+@mixin app-theme($theme) {
+    @include shared-theme($theme);
+    // @include plugins-theme($theme);
+    // @include included-theme($theme);
+    // @include main-theme($theme);
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
+    .error {
+        color: mat-color($warn);
+    }
+    .filter-bar {
+        background: mat-color($background, background);
+    }
+
+    .btn {
+        a {
+            color: currentColor;
+        }
+    }
+
+    div.item-grid {
+        md-card-footer {
+            background: mat-color($background, background);
+        }
+    }
+
+}

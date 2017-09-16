@@ -105,7 +105,14 @@ export class ProjectConfig extends SeedConfig {
       {
         name: '@angular/cdk/table',
         path: 'node_modules/@angular/cdk/bundles/cdk-table.umd.js'
-      }
+      },
+      {
+        name: '@angular/flex-layout',
+        path: 'node_modules/@angular/flex-layout/bundles/flex-layout.umd.js',
+        packageMeta: {
+          defaultExtension: 'js'
+        }
+      }      
     ];
 
     this.addPackagesBundles(additionalPackages);

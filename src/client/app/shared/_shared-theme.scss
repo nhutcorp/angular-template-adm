@@ -1,0 +1,9 @@
+@import './navbar/navbar-theme';
+// @import './footer/footer-theme';
+// @import './profilebox/profilebox-theme';
+
+@mixin shared-theme($theme) {
+    @include navbar-theme($theme);
+    // @include footer-theme($theme);
+    // @include nh3-profile-box-theme($theme);
+}

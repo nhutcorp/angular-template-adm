@@ -1,4 +1,10 @@
-<nav>
-  <a [routerLink]="['/']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">HOME</a>
-  <a [routerLink]="['/about']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">ABOUT</a>
+<!-- TODO: figure out if the <nav> should go inside of a <header> element. -->
+<nav class="docs-navbar" fxLayout="row" fxLayoutAlign="start center">
+  <div class="fill">
+    <a md-button routerLink="/" aria-label="Mean2Adm">
+      <img class="docs-mean2-logo" src="../../../assets/svg/mean2logo.svg" alt="Mean2Adm">
+      <span>Mean2Adm</span>
+    </a>
+  </div>
+
 </nav>
