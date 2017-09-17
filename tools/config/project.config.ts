@@ -20,7 +20,7 @@ export class ProjectConfig extends SeedConfig {
     // this.TYPED_COMPILE_INTERVAL = 5;
 
     this.ENABLE_SCSS = true;
-    
+
     // Add `NPM` third-party libraries to be injected/bundled.
     this.NPM_DEPENDENCIES = [
       ...this.NPM_DEPENDENCIES,
@@ -112,11 +112,11 @@ export class ProjectConfig extends SeedConfig {
         packageMeta: {
           defaultExtension: 'js'
         }
-      }      
+      }
     ];
 
     this.addPackagesBundles(additionalPackages);
-    
+
     /* Add proxy middleware */
     // this.PROXY_MIDDLEWARE = [
     //   require('http-proxy-middleware')('/api', { ws: false, target: 'http://localhost:3003' })

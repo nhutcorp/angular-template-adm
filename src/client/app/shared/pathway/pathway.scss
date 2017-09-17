@@ -1,0 +1,46 @@
+@import '../../../css/variables';
+
+.pathway {
+  background-color: transparent;
+  padding: $md-card-default-padding;
+}
+:host {
+  h3 {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: $md-pathway-font-color;
+  }
+
+  small {
+    font-size: $md-pathway-font-size;
+    color: $md-pathway-font-color;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    color: $md-pathway-font-color;
+    font-size: $md-pathway-font-size;
+  }
+
+  a:link, a:visited {
+    text-decoration: none;
+    color: $md-pathway-font-color;
+    display: flex;
+    align-items: center;
+
+  }
+
+}
+
+@media ($md-xsmall) {
+  .pathway {
+    padding: $md-card-mobile-padding;
+  }
+}

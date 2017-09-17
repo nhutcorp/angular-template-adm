@@ -1,0 +1,13 @@
+.sd-footer {
+  margin-top: 3px;
+  padding: 12px;
+  font-size: 12px;
+  text-align: center;
+  a {
+    padding: 0;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

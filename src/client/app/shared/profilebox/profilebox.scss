@@ -1,0 +1,40 @@
+$nh3-profile-font-size: 13px;
+$nh3-icon-button-size: 30px;
+
+.profile-wrap {
+  padding: 10px;
+  color: #FFF;
+}
+
+.profile-box {
+  //padding: 10px;
+  .profile-info {
+    padding: 5px 10px;
+    font-size: $nh3-profile-font-size;
+    .title {
+      font-size: 20px;
+    }
+    .sub-title, .title {
+      margin-left: 8px;
+      line-height: 20px;
+    }
+
+  }
+  > img {
+    width: 70px;
+    height: 70px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+  }
+}
+
+.profile-tool {
+  justify-content: space-between;
+  padding-left: 48px;
+}
+
+// [md-icon-button] {
+//   width: $nh3-icon-button-size;
+//   height: $nh3-icon-button-size;
+// }

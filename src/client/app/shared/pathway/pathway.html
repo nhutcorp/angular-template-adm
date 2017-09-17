@@ -1,0 +1,22 @@
+
+<div fxFlex fxLayout="row">
+  <div fxFlex class="pathway" fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="start start" fxLayoutAlign.gt-md="center center">
+    <div fxLayout="column" fxFlex>
+      <h3>MEAN 2 Admin</h3>
+      <small fxShow="false" fxShow.gt-md>Admin tools of Mean 2 Admin</small>
+    </div>
+
+    <ul fxLayout="row" fxLayoutAlign="center center">
+      <li><a href="javascript:void(0)">Home <md-icon class="md-18">keyboard_arrow_right</md-icon></a></li>
+      <li>
+        <a href="javascript:void(0)">Path Menu <md-icon class="md-18">keyboard_arrow_right</md-icon></a>
+      </li>
+      <li><span>Last Item</span></li>
+    </ul>
+  </div>
+  <div class="pathway" fxHide="false" fxHide.gt-md >
+    <button md-icon-button (click)="toggleSidenav.emit()"><md-icon>menu</md-icon></button>
+  </div>
+  
+</div>
+

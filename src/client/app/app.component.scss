@@ -1,3 +1,5 @@
+@import '../css/variables';
+
 sd-app {
   position: absolute;
   top: 0;
@@ -6,9 +8,9 @@ sd-app {
   right: 0;
   display: flex;
   flex-direction: column;
-  > router-outlet + * {
-    flex-grow: 1;
-  }
+  // > router-outlet + * {
+  //   flex-grow: 1;
+  // }
 
   > auth-login {
     display: flex;
@@ -22,4 +24,44 @@ sd-app {
 sd-navbar {
   display: flex;
   flex-direction: row;
+  position: relative;
+  z-index: 99;
+}
+
+.viewer-sidenav-container {
+  // Fix Scroll on Safari
+  // height: 100%;
+  overflow: auto;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.viewer-sidenav {
+  width: $sidenav-width;
+  bottom: 0;
+  overflow: auto;
+  height: 100%;
+}
+
+.slidenav-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav-content {
+  display: flex;
+  flex-direction: column;
+  // The rule will match the element following the router-outlet which will be the routed component.
+  > router-outlet + * {
+    flex-grow: 1;
+    padding: $md-card-default-padding;
+  }
+}
+
+@media ($md-xsmall) {
+  .sidenav-content {
+    router-outlet + * {
+      padding: $md-card-mobile-padding;
+    }
+  }
 }

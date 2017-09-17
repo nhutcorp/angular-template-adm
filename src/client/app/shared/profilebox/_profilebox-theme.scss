@@ -1,0 +1,26 @@
+@mixin gradient-radial($inner-color: #555, $outer-color: #333) {
+  background-image: -webkit-radial-gradient(circle, $inner-color, $outer-color);
+  background-image: radial-gradient(circle, $inner-color, $outer-color);
+  background-repeat: no-repeat;
+}
+
+@mixin profilebox-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  sd-profile-box {
+    .profile-wrap {
+      @include gradient-radial(mat-color($primary, 400), mat-color($primary, 900));
+    }
+
+    .profile-box {
+      .profile-info {
+        color: mat-color($primary, default-contrast);
+      }
+    }
+
+  }
+
+}

@@ -32,4 +32,27 @@
         }
     }
 
+    .viewer-sidenav {
+        box-shadow: 3px 0 6px rgba(0, 0, 0, .24);
+        &.md-sidenav-opened {
+            box-shadow: 3px 0 6px rgba(0, 0, 0, .24);
+        }
+    }
+
+    md-grid-tile {
+        color: white;
+        &.accent {
+            background: mat-color($accent, 0.8);
+        }
+        &.warn {
+            background: mat-color($warn, 0.7);
+        }
+        &.primary {
+            background: mat-color($primary, 0.7);
+        }
+        &.none {
+            background: rgba(black, 0.5);
+        }        
+    }    
+
 }

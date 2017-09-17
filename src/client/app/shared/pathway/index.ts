@@ -1,0 +1,1 @@
+export { PathwayComponent } from './pathway';

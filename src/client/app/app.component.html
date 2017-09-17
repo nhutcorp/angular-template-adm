@@ -1,2 +1,17 @@
 <sd-navbar class="mat-elevation-z6"></sd-navbar>
-<router-outlet></router-outlet>
+<md-sidenav-container class="viewer-sidenav-container">
+  <md-sidenav #sidenav class="viewer-sidenav" [opened]="media.isActive('gt-md')" [mode]="media.isActive('gt-md') ? 'side' : 'over'">
+      <div class="slidenav-left">
+        <sd-profile-box></sd-profile-box>
+        <md-nav-list>
+          <a md-list-item [routerLink]="['/']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">HOME</a>
+          <a md-list-item [routerLink]="['/about']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">ABOUT</a>
+        </md-nav-list>
+      </div>
+  </md-sidenav>
+  <div #main class="sidenav-content">
+    <sd-pathway (toggleSidenav)="sidenav.toggle()"></sd-pathway>
+    <router-outlet></router-outlet>
+    <sd-footer></sd-footer>
+  </div>
+</md-sidenav-container>
