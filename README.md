@@ -14,7 +14,7 @@ In order to start the seed use:
 
 ```bash
 $ git clone --depth 1 https://github.com/nhutcorp/angular-template-adm.git
-$ cd angular-seed
+$ cd angular-template-adm
 
 # install the project's dependencies
 $ npm install
