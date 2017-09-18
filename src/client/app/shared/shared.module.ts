@@ -2,7 +2,13 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { MdButtonModule, MdIconModule, MdTooltipModule } from '@angular/material';
+import {
+  MdButtonModule,
+  MdIconModule,
+  MdTooltipModule,
+  MdMenuModule,
+  MdListModule
+} from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { ToolbarComponent } from './toolbar/toolbar.component';
@@ -24,6 +30,8 @@ import { FooterComponent } from './footer/footer';
     MdButtonModule,
     MdIconModule,
     MdTooltipModule,
+    MdMenuModule,
+    MdListModule,
     FlexLayoutModule
   ],
   declarations: [
